@@ -1,23 +1,28 @@
-var connect = require('connect');
+var express = require('express');
+var path = require('path');
 var sassMiddleware = require('node-sass-middleware');
 
-var srcPath = __dirname + '/sass';
-var destPath = __dirname + '/public/styles';
+//var routes = require('./routes/index');
 
-var serveStatic = require('serve-static')
-var http = require('http');
-var port = process.env.PORT || 8000;
-var app = connect();
-app.use('/styles', sassMiddleware({
+var srcPath = __dirname + '/sass';
+var destPath = __dirname + '/public';
+
+var app = express();
+
+app.use(sassMiddleware({
   src: srcPath,
   dest: destPath,
   debug: true,
   outputStyle: 'expanded'
 }));
-app.use('/',
-  serveStatic('./public', {})
-);
-http.createServer(app).listen(port);
-console.log('Server listening on port ' + port);
-console.log('srcPath is ' + srcPath);
-console.log('destPath is ' + destPath);
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+module.exports = app;

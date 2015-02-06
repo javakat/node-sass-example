@@ -1,21 +1,23 @@
 {
   "name": "node-sass-example",
   "version": "1.0.0",
-  "description": "example node-sass usage",
+  "description": "example node-sass-middleware usage in express",
   "main": "server.js",
-  "repository": "https://github.com/andrew/node-sass-example",
+  "repository": "https://github.com/javakat/node-sass-example",
   "keywords": [
     "sass",
     "scss",
     "node-sass",
-    "example"
+    "example",
+    "express"
   ],
-  "author": "Andrew Nesbitt",
+  "author": "Jake Harris",
   "license": "MIT",
   "dependencies": {
-    "connect": "^3.3.4",
+    "express": "~4.11.1",
+    "ejs": "~2.2.4",
     "node-sass-middleware": "^0.4.0",
-    "serve-static": "^1.8.1"
+    "debug": "~2.1.1"
   },
   "engines": {
     "node": ">= 0.10.21"
