@@ -1,16 +1,14 @@
 # Node-Sass Example App
 
-Example app to show how to use [node-sass](https://github.com/sass/node-sass) as a connect middleware.
-
-[ ![Codeship Status for andrew/node-sass-example](https://codeship.com/projects/cfbcb0f0-4e78-0132-9932-123ac3d7c0ec/status)](https://codeship.com/projects/47708)
+Example app to show how to use [node-sass](https://github.com/sass/node-sass) as an express middleware via [node-sass-middleware](https://github.com/sass/node-sass-middleware).
 
 ## Setup
 
-    git clone git@github.com:andrew/node-sass-example.git
+    git clone git@github.com:javakat/node-sass-example.git
     cd node-sass-example
     npm install
-    node server.js
-    open http://localhost:5000
+    node ./bin/www
+    open http://localhost:3000
 
 ## Note on Patches/Pull Requests
 
@@ -23,4 +21,5 @@ Example app to show how to use [node-sass](https://github.com/sass/node-sass) as
 
 ## Copyright
 
-Copyright (c) 2013 Andrew Nesbitt. See LICENSE for details.
+Copyright (c) 2015 Jake Harris. See LICENSE for details.
+*Forked from [Andrew Nesbitt](https://github.com/andrew). Used his example HTML and Sass; the Express setup is my work.*
