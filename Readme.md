@@ -22,4 +22,5 @@ Example app to show how to use [node-sass](https://github.com/sass/node-sass) as
 ## Copyright
 
 Copyright (c) 2015 Jake Harris. See LICENSE for details.
+
 *Forked from [Andrew Nesbitt](https://github.com/andrew). Used his example HTML and Sass; the Express setup is my work.*
